@@ -4,10 +4,9 @@ Release:        0
 License:        LGPL-2.1+
 Summary:        Utilities for SCTP (Stream Control Transmission Protocol)
 Url:            http://lksctp.sourceforge.net
-Group:          Productivity/Networking/Other
+Group:          System/Network
 Source0:        %{name}-%{version}.tar.bz2
 BuildRequires:  libtool
-BuildRoot:      %{_tmppath}/%{name}-%{version}-build
 
 %description
 This package contains the SCTP base runtime library and command line
@@ -19,7 +18,7 @@ transparent multihoming, and multiple ordered streams of messages.
 
 %package devel
 Summary:        Development files for SCTP (Stream Control Transmission Protocol)
-Group:          Development/Libraries/C and C++
+Group:          Development/Libraries
 Requires:       %{name} = %{version}
 Requires:       glibc-devel
 
@@ -53,8 +52,7 @@ rm %{buildroot}/%{_libdir}/*.la
 
 %files
 %defattr(-,root,root,-)
-%doc AUTHORS COPYING ChangeLog COPYING.lib
-%doc doc/*.txt
+%license COPYING  COPYING.lib
 %{_bindir}/*
 %{_libdir}/libsctp.so.*
 %dir %{_libdir}/lksctp-tools
