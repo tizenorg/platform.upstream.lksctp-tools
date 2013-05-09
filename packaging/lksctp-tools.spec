@@ -43,8 +43,6 @@ make %{?_smp_mflags}
 
 %install
 %make_install
-rm %{buildroot}/%{_libdir}/lksctp-tools/*.la
-rm %{buildroot}/%{_libdir}/*.la
 
 %post -p /sbin/ldconfig
 
