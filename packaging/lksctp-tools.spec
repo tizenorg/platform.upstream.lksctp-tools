@@ -6,6 +6,7 @@ Summary:        Utilities for SCTP (Stream Control Transmission Protocol)
 Url:            http://lksctp.sourceforge.net
 Group:          System/Network
 Source0:        %{name}-%{version}.tar.bz2
+Source1001: 	lksctp-tools.manifest
 BuildRequires:  libtool
 
 %description
@@ -32,6 +33,7 @@ transparent multi-homing, and multiple ordered streams of messages.
 
 %prep
 %setup -q
+cp %{SOURCE1001} .
 
 %build
 autoreconf --force --install
@@ -49,6 +51,7 @@ make %{?_smp_mflags}
 %postun -p /sbin/ldconfig
 
 %files
+%manifest %{name}.manifest
 %defattr(-,root,root,-)
 %license COPYING  COPYING.lib
 %{_bindir}/*
@@ -58,6 +61,7 @@ make %{?_smp_mflags}
 %{_mandir}/man7/*
 
 %files devel
+%manifest %{name}.manifest
 %defattr(-,root,root,-)
 %{_includedir}/netinet/sctp.h
 %{_libdir}/libsctp.so
