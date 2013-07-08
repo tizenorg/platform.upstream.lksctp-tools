@@ -1,0 +1,8 @@
+Change-Id: I62b3a14012cc6ea28421a98152e8c21b98a899d9
+Code-Review+2: Ryan Ware <ware@linux.intel.com>
+Verified+1: Ryan Ware <ware@linux.intel.com>
+Submitted-by: Ryan Ware <ware@linux.intel.com>
+Submitted-at: Mon, 08 Jul 2013 09:39:53 -0700
+Reviewed-on: https://review.tizen.org/gerrit/4846
+Project: platform/upstream/lksctp-tools
+Branch: refs/heads/tizen
