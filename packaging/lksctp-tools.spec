@@ -9,6 +9,11 @@ Source0:        %{name}-%{version}.tar.bz2
 Source1001: 	lksctp-tools.manifest
 BuildRequires:  libtool
 
+%if ! %{?license:0}
+%define license %doc
+%endif
+
+
 %description
 This package contains the SCTP base runtime library and command line
 tools.
@@ -68,6 +73,7 @@ make %{?_smp_mflags}
 %dir %{_libdir}/lksctp-tools
 %{_libdir}/lksctp-tools/*.so
 %{_datadir}/lksctp-tools/
+%{_datadir}/lksctp-tools/*
 %{_mandir}/man3/*
 
 %changelog
